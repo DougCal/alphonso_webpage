@@ -1,0 +1,360 @@
+/**@import url("tile.css");*/
+
+section {
+  display: block;
+}
+
+@font-face { font-family: Lato; src: url('/font/lato-regular/lato-regular.ttf'); }
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+
+/* Image replacement */
+.ir
+{
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.clear
+{
+  clear: both;
+}
+
+.hide
+{
+  display: none !important;
+}
+
+img
+{
+  max-width: 100%;
+  
+}
+
+body
+{
+  font-size: 16px;
+  font-weight: 300;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #747474;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul.unstyled
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --------- navbar -------- */
+#navbar-top
+{
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+
+  background-image: url('http://alphonso.tv/img/Header-Main-small.png');
+}
+
+#navbar-top .btn-navbar
+{
+  border: 0;
+  background: transparent;
+  padding: 7px 10px;
+  float: right;
+  margin-top: 12px;
+  display: none;
+}
+
+#navbar-top .btn-navbar .bar
+{
+  width: 20px;
+  height: 3px;
+  margin: 3px;
+  background-color: #fff;
+}
+
+#navbar-top a
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+#home-link
+{
+  display: inline-block;
+  margin: 12px 0;
+
+  background-image: url('http://alphonso.tv/img/alphonso.png');
+  width: 170px;
+  height: 53px;
+}
+
+#navbar-top .container
+{
+  margin: 0 auto;
+}
+
+#navbar-top ul
+{
+  float: right;
+  margin-top: 7px;
+}
+
+#navbar-top ul li
+{
+  padding: 20px 10px;
+  display: inline-block;
+}
+
+#navbar-top ul li a
+{
+  padding: 5px 10px;
+  border: 1px solid transparent;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#navbar-top ul li a:hover
+{
+  border-radius: 4px;
+  border-color: #a10000;
+  background-color: #a10000;
+}
+
+#navbar-top ul li.active a
+{
+  border-radius: 4px;
+  border-color: #a10000;
+  background-color: #a10000;
+}
+
+#makeRed
+{
+  transform: translateY(-20px);
+  width: cover;
+  height: 600px;
+  background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url(https://static1.squarespace.com/static/549a5b1be4b0d27073638b5a/574521df9f72665be8827341/574533d4d51cd40946286587/1464153047946/SF_GoldenGateBridge_Panorama1+005172.jpg?format=2500w);
+}
+  
+#makeRed h1.centerIt{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+#greySpace{
+  transform: translateY(-30px);
+  display: block;
+  background-color: #2a2a2a;
+  height: 8em;
+}
+
+#greySpace h4{
+  padding-top: 2em;
+  padding-left: 12em;
+  padding-right: 12em;
+}
+
+.career
+{
+  cursor: hand;
+  cursor: pointer;
+}
+
+/*OFFICES/LOCATION*/
+
+#offices {
+  background: #323232;
+}
+
+#offices .location
+{
+  display: inline-block;
+  margin: 0 15px 40px 25px;
+}
+
+#offices .location h4
+{
+  margin: -5px 0 5px 18px;
+  font-size: 20px;
+  font-style: bold;
+  color: #ffffff;
+  text-align: left;
+}
+
+#offices .location img
+{
+  cursor: pointer;
+  border: 10px solid  #ffffff;
+  margin: 20px;
+}
+
+#offices .location .address
+{
+  color: #bbbbbb;
+  font-size: 15px;
+  text-align: left;
+  font-style: lighter;
+  margin: 5px 0 5px 18px;
+}
+
+
+/* --------- footer -------- */
+body > footer
+{
+  padding: 13px 0;
+
+  background-color: #e10e27;
+  line-height: 23px;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 14px;
+}
+
+#social
+{
+  float: right;
+}
+
+#social .icon
+{
+  display: inline-block;
+  height: 23px;
+  margin-left: 12px;
+}
+
+#social .twitter
+{
+  width: 28px;
+  background: transparent url('http://alphonso.tv/img/twitter.png') no-repeat center center;
+}
+
+#social .mail
+{
+  width: 23px;
+  background: transparent url('http://alphonso.tv/img/mail2.png') no-repeat center center;
+}
+
+@media (max-width: 760px) {
+  #home-link
+  {
+    margin: 4px 0 2px;
+  }
+
+  #navbar-top .btn-navbar
+  {
+    display: block;
+  }
+
+  #navbar-top .nav
+  {
+    display: none;
+    background-image: url('../img/Header-Main-small.png');
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+  }
+
+  #navbar-top .nav.in
+  {
+    display: block;
+  }
+
+  #navbar-top .nav li
+  {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  #navbar-top ul li
+  {
+    padding: 20px 5px;
+  }
+}
+@media (max-width: 768px) {
+  body > footer
+  {
+    padding-left: 10px;
+  } 
+
+  section
+  {
+    font-size: 24px;
+  }
+  
+  #offices .location h4
+  {
+    font-size: 18px;
+  }
+
+  #offices .location .address
+  {
+    font-size: 14px;
+  }
+}
